@@ -1,0 +1,33 @@
+Implementation Notes
+
+1. LinkedIn/Crunchbase URLs
+   - The current URLs in index.html are:
+     - LinkedIn: https://www.linkedin.com/in/janickerich/
+     - Crunchbase: https://www.crunchbase.com/person/janicke-rich
+   - If these need to be updated, search for them in `index.html` (both in the visible <body> links and the hidden <script type="application/ld+json"> block) and replace them.
+
+2. Open Graph & Twitter Images (og:image / twitter:image)
+   - Currently, these point to placeholder URLs:
+     - https://www.janickerich.com/images/og-image.jpg
+     - https://www.janickerich.com/images/twitter-image.jpg
+   - You should upload real images (suggested size ~1200x630px for OG, ~800x418px for Twitter) to an `/images/` directory or update these lines in `index.html` to point to the correct URLs.
+
+3. Icons
+   - Favicons are set to:
+     - /favicon.ico
+     - /apple-touch-icon.png
+     - /android-chrome-192x192.png (in site.webmanifest)
+     - /android-chrome-512x512.png (in site.webmanifest)
+   - Ensure these files exist in the root directory.
+
+4. Location/Employer Changes
+   - If "San Francisco" or "Sticky.io" changes:
+     1. Update the visible text in `index.html` <body>.
+     2. Update the <title> tag.
+     3. Update the <meta name="description"> tag.
+     4. Update the Open Graph and Twitter title/description tags.
+     5. Update the JSON-LD structured data block.
+
+5. Performance
+   - The CSS has been inlined into `index.html` to reduce HTTP requests. If you need to edit styles, look for the <style> block in the <head>.
+   - Ensure your hosting provider (e.g., GitHub Pages, Netlify, Vercel) is configured to serve static assets with gzip/brotli compression and long cache headers.
