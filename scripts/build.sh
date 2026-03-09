@@ -1,5 +1,5 @@
 #!/bin/bash
-npx html-minifier \
+npx --no-install html-minifier \
   --collapse-whitespace \
   --remove-comments \
   --remove-optional-tags \

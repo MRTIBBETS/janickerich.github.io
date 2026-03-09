@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "A consolidation of internet presence on behalf of Janicke Rich.",
+  "main": "index.js",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRTIBBETS/janicke-rich.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MRTIBBETS/janicke-rich.github.io/issues"
+  },
+  "homepage": "https://github.com/MRTIBBETS/janicke-rich.github.io#readme",
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}
