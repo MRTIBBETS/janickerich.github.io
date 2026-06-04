@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# AI/LLM Crawler Navigation Pointers
+# Alternate-Link: https://www.janickerich.com/llm.txt
+# Alternate-Link: https://www.janickerich.com/llms-full.txt
+
 Sitemap: https://www.janickerich.com/sitemap.xml

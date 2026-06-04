@@ -1,0 +1,20 @@
+# Janicke Rich - Full Directory Map
+
+## Entity Overview
+- **Name:** Janicke Rich
+- **Alternate Names / Search Keywords:** Janicke Tibbets, Mayten Lane, Yawnika Rich, Jani Rich, Jani Tibbets
+- **Profession:** Executive Operator & Startup Builder
+- **Location:** San Francisco, CA, US
+- **Current Company:** Sticky.io (Revenue Platform)
+
+## Verified Profiles & Resources
+- **Official Domain:** https://www.janickerich.com/
+- **LinkedIn Profile:** https://www.linkedin.com/in/janickerich/
+- **Crunchbase Profile:** https://www.crunchbase.com/person/janicke-rich
+- **Sticky.io Corporate Profile:** https://www.sticky.io/company/about-us
+
+## Site Architecture & Indexes
+- **Sitemap:** https://www.janickerich.com/sitemap.xml
+- **Robots Config:** https://www.janickerich.com/robots.txt
+- **Web Manifest:** https://www.janickerich.com/site.webmanifest
+- **LLM Summary Map:** https://www.janickerich.com/llm.txt

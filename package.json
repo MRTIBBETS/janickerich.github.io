@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/MRTIBBETS/janicke-rich.github.io#readme",
   "devDependencies": {
-    "html-minifier": "^4.0.0"
+    "html-minifier-terser": "^7.2.0"
   }
 }

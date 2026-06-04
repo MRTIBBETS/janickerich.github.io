@@ -8,13 +8,30 @@
   <!-- Google tag (gtag.js) -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F480LH8ZZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    window.gtag = gtag;
 
-    gtag('config', 'G-2F480LH8ZZ');
+    (function() {
+      var analyticsLoaded = false;
+      function loadAnalytics() {
+        if (analyticsLoaded) return;
+        analyticsLoaded = true;
+
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2F480LH8ZZ';
+        document.head.appendChild(script);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-2F480LH8ZZ');
+
+      ['mousemove', 'scroll', 'touchstart', 'keydown'].forEach(function(event) {
+        window.addEventListener(event, loadAnalytics, { once: true, passive: true });
+      });
+    })();
   </script>
 
   <!-- Title -->
@@ -61,6 +78,10 @@
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://www.janickerich.com/">
+
+  <!-- LLM Discovery -->
+  <link rel="alternate" type="text/plain" href="/llm.txt" title="LLM-friendly Summary">
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-friendly Full Profiles Directory">
 
   <!-- Inline Styles -->
   <style>
@@ -124,20 +145,44 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Janicke Rich",
-      "alternateName": ["Janicke Tibbets", "Yawnika Rich", "Jani Rich", "Jani Tibbets", "Mayten Lane"],
-      "description": "Janicke Rich is an executive operator and company builder in San Francisco, working on the revenue platform Sticky.io. Connect on LinkedIn or Crunchbase.",
-      "jobTitle": "Executive Operator",
-      "homeLocation": "San Francisco, CA, US",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sticky.io"
-      },
-      "url": "https://www.janickerich.com/",
-      "sameAs": [
-        "https://www.linkedin.com/in/janickerich/",
-        "https://www.crunchbase.com/person/janicke-rich"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.janickerich.com/#website",
+          "url": "https://www.janickerich.com/",
+          "name": "Janicke Rich",
+          "description": "Personal landing page and directory of Janicke Rich."
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://www.janickerich.com/#profile",
+          "url": "https://www.janickerich.com/",
+          "mainEntity": {
+            "@id": "https://www.janickerich.com/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.janickerich.com/#person",
+          "name": "Janicke Rich",
+          "alternateName": ["Janicke Tibbets", "Yawnika Rich", "Jani Rich", "Jani Tibbets", "Mayten Lane"],
+          "description": "Janicke Rich is an executive operator and company builder in San Francisco, working on the revenue platform Sticky.io. Connect on LinkedIn or Crunchbase.",
+          "jobTitle": "Executive Operator",
+          "homeLocation": {
+            "@type": "Place",
+            "name": "San Francisco, CA, US"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sticky.io",
+            "url": "https://www.sticky.io/"
+          },
+          "url": "https://www.janickerich.com/",
+          "sameAs": [
+            "https://www.linkedin.com/in/janickerich/",
+            "https://www.crunchbase.com/person/janicke-rich"
+          ]
+        }
       ]
     }
     </script>
@@ -150,14 +195,14 @@
 
     <p>
       Hi, my name is Janicke. I am an executive operator and company builder based in San Francisco. Today, I work
-      on the revenue platform <a href="https://www.sticky.io/company/about-us" target="_blank"
-        rel="noopener noreferrer">Sticky.io</a>.
+      on the revenue platform <a id="anchor-sticky-io" data-agent-type="professional-link" href="https://www.sticky.io/company/about-us" target="_blank"
+        rel="noopener noreferrer" aria-label="Learn about the revenue platform Sticky.io where Janicke Rich works">Sticky.io</a>.
     </p>
 
     <p>
-      Connect with me on <a href="https://www.linkedin.com/in/janickerich/" target="_blank"
-        rel="noopener noreferrer me">LinkedIn</a> or <a href="https://www.crunchbase.com/person/janicke-rich"
-        target="_blank" rel="noopener noreferrer me">Crunchbase</a>.
+      Connect with me on <a id="anchor-linkedin" data-agent-type="social-profile" href="https://www.linkedin.com/in/janickerich/" target="_blank"
+        rel="noopener noreferrer me" aria-label="Connect with Janicke Rich on LinkedIn">LinkedIn</a> or <a id="anchor-crunchbase" data-agent-type="social-profile" href="https://www.crunchbase.com/person/janicke-rich"
+        target="_blank" rel="noopener noreferrer me" aria-label="View Janicke Rich's profile on Crunchbase">Crunchbase</a>.
     </p>
   </main>
 
